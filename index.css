@@ -1,0 +1,43 @@
+:root{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --accent: #06b6d4;
+  --danger: #ef4444;
+  --radius: 12px;
+  --shadow: 0 10px 30px rgba(16,24,40,0.08);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,var(--bg),#eef2ff);color:#0f172a;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+
+.app-shell{max-width:900px;margin:48px auto;padding:20px}
+.header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;box-shadow:var(--shadow)}
+h1{margin:0;font-size:20px}
+
+.card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+.small-muted{color:var(--muted);font-size:13px}
+
+.todo-layout{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}
+@media(max-width:880px){.todo-layout{grid-template-columns:1fr}}
+
+/* Input area */
+.input-row{display:flex;gap:12px;align-items:center}
+.input-row input[type="text"]{flex:1;padding:12px 14px;border-radius:10px;border:1px solid #e6eef8;font-size:16px;outline:none}
+.btn{background:var(--primary);color:#fff;padding:10px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
+.btn.ghost{background:#fff;border:1px solid #e6eef8;color:#111827}
+.btn.danger{background:var(--danger);color:#fff}
+
+/* List */
+.todo-list{list-style:none;padding:0;margin:0;margin-top:14px}
+.todo-item{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:10px;border:1px solid #f1f5f9;background:linear-gradient(180deg,#fff,#fbfdff);margin-bottom:10px}
+.todo-text{flex:1;padding-right:10px;word-break:break-word}
+.todo-actions{display:flex;gap:8px}
+
+.empty{padding:20px;text-align:center;color:var(--muted);background:linear-gradient(180deg,#fff,#fbfdff);border-radius:10px;border:1px dashed #e6eef8}
+
+footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
